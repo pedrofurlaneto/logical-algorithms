@@ -5,4 +5,4 @@
 There are a couple of logical algorithms and Data Sctrutures developed in C for learn more about the language and improve logical reasoning like a programmer.
 
 ### Why C? 🤔
-In view of this language is the basis of some of the most used languages in current,  and I needed to study that for university, it's like joining the useful to the pleasant.
+In view of this language is the basis of some of the most used languages in current, and I needed to study that for university, it's like joining the useful to the pleasant.
