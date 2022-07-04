@@ -2,7 +2,9 @@
 
 <div>
   <img align="center" src="https://simpleicons.org/icons/c.svg" alt="c" height="35px"> • 
-  <img align="center" src="https://img.shields.io/static/v1?label=Replit&message=Click to visit&color=DD1200&logo=Replit">
+  <a href="https://replit.com/@canas11?path=folder/Logical%20Algorithms%20and%20Data%20Structures%20in%20C">
+    <img align="center" src="https://img.shields.io/static/v1?label=Replit&message=Click to visit&color=DD1200&logo=Replit">
+  </a>
   <a href="https://github.com/1canas/logical-algorithms-and-data-structures/stargazers">
     <img align="center" alt="Stargazers" src="https://img.shields.io/github/stars/1canas/logical-algorithms-and-data-structures">
   </a>
