@@ -1,41 +1,70 @@
-// C program for implementation of Bubble sort
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#define EXIT_SUCCESS 0
 
-void swap(int* xp, int* yp)
-{
-	int temp = *xp;
-	*xp = *yp;
-	*yp = temp;
+void swap(int* prev_value, int* next_value) {
+	int temp = (int) malloc(sizeof(int));
+	
+	temp = *prev_value;
+	*prev_value = *next_value;
+	*next_value = temp;
 }
 
-// A function to implement bubble sort
-void bubbleSort(int arr[], int n)
-{
-	int i, j;
-	for (i = 0; i < n - 1; i++)
+void bubble_sort(int* arr, int size) {
+	int unsigned i = (int unsigned) malloc(sizeof(int unsigned));
 
-		// Last i elements are already in place
-		for (j = 0; j < n - i - 1; j++)
-			if (arr[j] > arr[j + 1])
-				swap(&arr[j], &arr[j + 1]);
+	if (size < 1) return;
+
+	for (i = 0; i < size; i++) {
+		if (arr[i] > arr[i + 1]) {
+			swap(&arr[i], &arr[i + 1]);
+		}
+	}
+
+	bubble_sort(arr, size - 1);
 }
 
-/* Function to print an array */
-void printArray(int arr[], int size)
-{
-	int i;
-	for (i = 0; i < size; i++)
+void print_array(int* arr, int size) {
+	int unsigned i = (int unsigned) malloc(sizeof(int unsigned));
+
+	printf("Sorted Array\n");
+	for (i = 0; i < size; i++) {
 		printf("%d ", arr[i]);
+	}
+
 	printf("\n");
 }
 
+void fill_array(int* arr, int size) {
+	int unsigned i = (int unsigned) malloc(sizeof(int unsigned));
+	
+	for (i = 0; i < size; i++) {
+		arr[i] = rand();
+	}
+}
+
 // Driver program to test above functions
-int main()
-{
-	int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
-	int n = sizeof(arr) / sizeof(arr[0]);
-	bubbleSort(arr, n);
-	printf("Sorted array: \n");
-	printArray(arr, n);
-	return 0;
+int main() {
+	int size = (int) malloc(sizeof(int));
+	srand(size);
+
+	do {
+		printf("Insert the size of array:\n>: ");
+		scanf("%d", &size);
+
+		if (size <= 0) {
+			printf("\nInsert a positive and different of 0");
+		}
+	} while(size <= 0);
+
+	int *arr = (int*) malloc(sizeof(int*) * (size - 1));
+
+	fill_array(arr, size);
+	bubble_sort(arr, size);
+	print_array(arr, size);
+
+	free(arr);
+
+	return EXIT_SUCCESS;
 }
