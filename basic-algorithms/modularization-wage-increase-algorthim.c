@@ -29,7 +29,7 @@ int main(void) {
   return 0; 
 }
 
-float new(float actual, int perc_to) {
+float new_wage_calc(float actual, int perc_to) {
   float new_wage, incr;
   
   printf("\nSalario atual: %2.f\nPercentual de aumento: %d", actual, perc_to);
